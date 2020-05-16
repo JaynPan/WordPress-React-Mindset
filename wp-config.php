@@ -55,6 +55,8 @@ define( 'SECURE_AUTH_SALT', '5e347871c34675235afd476c87c776d13ff8267a');
 define( 'LOGGED_IN_SALT',   '1b7b41c11fea2f52c79dbbbbcdba58296444338b');
 define( 'NONCE_SALT',       'd9343b296beee7034b0e23304da51296c373c2a6');
 
+define('JWT_AUTH_SECRET_KEY', 'jwt-secret-key-here!');
+
 /**#@-*/
 
 /**
