@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/react-wordpress">
         <Route exact path="/" component={Books} />
         <Route exact path="/book/:id" component={BookPage} />
       </Router>

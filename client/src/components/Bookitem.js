@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL
+
 export default function BookItem({ book }) {
   const [state, setState] = useState({ author: '', imageUrl: '', isLoading: true })
 
   useEffect(() => {
     const { featured_media, author } = book;
-    const getImagUrl = axios.get(`/wp-json/wp/v2/media/${featured_media}`)
-    const getAuthor = axios.get(`/wp-json/wp/v2/users/${author}`);
+    const getImagUrl = axios.get(`${API_URL}/wp-json/wp/v2/media/${featured_media}`)
+    const getAuthor = axios.get(`${API_URL}/wp-json/wp/v2/users/${author}`);
 
     Promise.all([getImagUrl, getAuthor])
       .then(res => {

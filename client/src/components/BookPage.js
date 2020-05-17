@@ -6,7 +6,7 @@ export default function BookPage(props) {
   const [state, setState] = useState({ book: {}, isLoading: true })
 
   useEffect(() => {
-    axios.get(`/wp-json/wp/v2/books/${props.match.params.id}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/wp-json/wp/v2/books/${props.match.params.id}`)
       .then(res => {
         setState({ book: res.data, isLoading: false })
       })

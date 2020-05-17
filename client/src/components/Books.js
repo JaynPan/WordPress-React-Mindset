@@ -8,7 +8,7 @@ export default function Books() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('/wp-json/wp/v2/books')
+    axios.get(`${process.env.REACT_APP_API_URL}/wp-json/wp/v2/books`)
       .then(res => {
         setBooks(res.data);
         setIsLoading(false)
