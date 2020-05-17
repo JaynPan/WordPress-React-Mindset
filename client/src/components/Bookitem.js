@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function BookItem({ book }) {
-  const { title, excerpt } = book;
   const [state, setState] = useState({ author: '', imageUrl: '', isLoading: true })
 
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function BookItem({ book }) {
   }, [])
 
   const { author, imageUrl, isLoading } = state;
+  const { title, excerpt, id } = book;
 
   if(isLoading) {
     return <div>loading...</div>
@@ -32,6 +33,8 @@ export default function BookItem({ book }) {
       <small>Reviewed by <strong>{author}</strong></small>
       <img style={{ width: '100%' }} src={imageUrl} alt={title.rendered}  />
       <div dangerouslySetInnerHTML={{__html: excerpt.rendered}} />
+      <Link to={`/book/${id}`}>Read Review</Link>
+      <hr />
     </div>
   )
 }
