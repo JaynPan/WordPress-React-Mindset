@@ -14,6 +14,10 @@
  * @since Twenty Twenty 1.0
  */
 
+$redirectUrl = get_site_url() . "/wp-admin";
+wp_redirect($redirectUrl, 301);
+exit;
+
 get_header();
 ?>
 
