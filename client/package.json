@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/react-wordpress",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -16,6 +16,7 @@
   "scripts": {
     "start": "env-cmd -f .env.development react-scripts start",
     "build": "env-cmd -f .env.production react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,6 +38,7 @@
   "proxy": "http://localhost:8000",
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "react-app-env": "^1.2.3"
+    "react-app-env": "^1.2.3",
+    "react-snap": "^1.23.0"
   }
 }
