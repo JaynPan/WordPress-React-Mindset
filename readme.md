@@ -13,4 +13,4 @@ $ docker-compose down --volumes
 
 Follow along the below tutorial, create custom post type, etc.
 
-https://www.youtube.com/watch?v=OVXsF_Jm9Lc
+https://www.youtube.com/watch?v=fFNXWinbgro
