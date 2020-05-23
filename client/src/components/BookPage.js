@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+import Head from '../components/head';
 
 export default function BookPage(props) {
   const [state, setState] = useState({ book: {}, isLoading: true })
@@ -21,6 +22,7 @@ export default function BookPage(props) {
 
   return(
     <Fragment>
+       <Head title={book.title.rendered} />
       <Link to='/'>Go Back</Link>
       <hr />
       <h1>{book.title.rendered}</h1>

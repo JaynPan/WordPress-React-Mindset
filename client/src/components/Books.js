@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import BookItem from './Bookitem';
+import Head from '../components/head';
 
 export default function Books() {
   const [books, setBooks] = useState([]);
@@ -22,6 +23,7 @@ export default function Books() {
 
   return (
     <div>
+      <Head title="Books" />
       {books.map(book => {
         return <BookItem book={book} key={book.id} />
       })}
